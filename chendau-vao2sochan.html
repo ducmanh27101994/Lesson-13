@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chèn dấu - vào 2 số chẵn</title>
+</head>
+<body>
+<input type="text" id="inputNumber">
+<button type="button" id="btnAdd" onclick="add_arr()">Add Number</button>
+<button type="button" id="btnDisplay" onclick="displayarr()">Change</button>
+
+<p id="result"></p>
+
+<script>
+    let arr = Array();
+    let index = 0;
+    function add_arr() {
+
+        arr[index] = document.getElementById("inputNumber").value;
+        index++;
+        document.getElementById("inputNumber").value = "";
+    }
+
+    function displayarr() {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] %2===0) {
+                arr[i] = -arr[i]
+            }
+        }
+        document.getElementById("result").innerHTML = arr.join("");
+    }
+
+
+</script>
+
+
+
+
+<script>
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

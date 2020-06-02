@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+
+<script>
+    let textEng = prompt("Nhập từ bạn cần tra: ");
+
+    let a = ["cat","dog","bird","tree","flower"];
+    let b = ["mèo","chó","chim","cây","bông hoa"];
+    let index = 0;
+    let flag = true;
+    for (let i = 0; i < a.length; i++) {
+        if (textEng === a[i]){
+            index += i
+            flag = false;
+            alert(`Từ ${textEng} có nghĩa là ${b[index]}`)
+            break;
+        }
+    }
+    if (flag === true) {
+        alert("Không có trong từ điển");
+    }
+
+
+
+
+
+</script>
+
+</body>
+</html>

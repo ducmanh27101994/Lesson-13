@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập và xóa v khỏi mảng</title>
+</head>
+<body>
+
+<script>
+    function numberInput(arr,v) {
+        for (let i = 0; i < arr.length ; i++) {
+            if (v === arr[i]) {
+                arr.splice(i,1);
+            }
+        }
+        return arr;
+    }
+    console.log(numberInput([4,1,5,7,9,4],4))
+
+</script>
+
+
+</body>
+</html>

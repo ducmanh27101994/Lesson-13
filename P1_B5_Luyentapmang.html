@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+
+<script>
+    function negative(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                count = count + 1;
+            }
+        }
+        return count
+    }
+
+    console.log(negative([-5,-6,10,5]))
+</script>
+
+
+</body>
+</html>
