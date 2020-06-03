@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</title>
+</head>
+<body>
+
+<script>
+
+        function numberString(str) {
+        let count = 0;
+        let arr = str.split("");
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]%1 === 0) {
+                    count++;
+                }
+            }
+
+        document.write(count);
+    }
+    numberString("56kg8897")
+    
+</script>
+
+
+</body>
+</html>
