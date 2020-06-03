@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>52 lá bài</title>
+</head>
+<body>
+
+<script>
+    let arr = Array();
+
+    for (let i = 1; i <= 52; i++) {
+        arr[i] = i
+    }
+    // document.write(arr + "</br>");
+
+    let index = arr.length;
+    let randomIndex;
+    let temp;
+
+    while (0 !== index) {
+        randomIndex = Math.floor(Math.random() * index);
+        index -= 1;
+        temp = arr[index];
+        arr[index] = arr[randomIndex];
+        arr[randomIndex] = temp;
+    }
+    // document.write(arr)
+
+   //Chia bài làm 2
+    let player1 = arr.slice(0,26)
+    let player2 = arr.splice(26)
+    document.write(player1 + "</br>" + "</br>")
+    document.write(player2)
+
+    //Bắt đầu so sánh
+    let store1 = 0;
+    let store2 = 0;
+
+    for (let i = 0; i < player1.length; i++) {
+        if (player1[i] > player2[i]) {
+            store1++;
+        } else if (player1[i] < player2[i]) {
+            store2++;
+        }
+    }
+    if (store1 > store2) {
+        alert("Player1 Win" + store1 + ">" + store2)
+    } else if (store1 < store2) {
+        alert("Player2 Win" + store2 + ">" + store1)
+    } else {
+        alert("Hòa nhau" + store2 + "=" + store1)
+    }
+
+</script>
+
+</body>
+</html>
