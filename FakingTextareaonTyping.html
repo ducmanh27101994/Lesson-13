@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<body>
+
+<h1>Type anthing slowly</h1>
+<textarea id="textarea1" onkeydown="keydow1_arr()"></textarea>
+
+<script>
+    function keydow1_arr() {
+    let a = "TÔI LÀ MỘT ĐỨA NGỐC!!"
+    let arr = a.split("");
+    let newText = "";
+    let textarea = document.getElementById("textarea1");
+
+
+    for (let i = 0; i < arr.length ; i++) {
+           newText += arr[i];
+
+            }
+    }
+
+
+
+
+</script>
+</body>
+</html>
