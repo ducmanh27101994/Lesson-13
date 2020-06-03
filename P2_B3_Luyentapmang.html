@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</title>
+</head>
+<body>
+<input type="text" id="inputNumber">
+<button type="button" id="btnAdd" onclick="add_arr3()">Add Number</button>
+<button type="button" id="btnDisplay" onclick="displayarr3()">Change</button>
+<script>
+    let arr = Array();
+    let index = 0;
+    function add_arr3() {
+
+        arr[index] = document.getElementById("inputNumber").value;
+        index++;
+        document.getElementById("inputNumber").value = "";
+    }
+
+    function displayarr3() {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "-") {
+                arr[i] = "_"
+            }
+        }
+        document.getElementById("result").innerHTML = arr.join("");
+    }
+    
+</script>
+
+
+</body>
+</html>
